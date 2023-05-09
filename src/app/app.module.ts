@@ -7,6 +7,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeComponent } from './pages/home/home.component';
 import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { RestaurantTagComponent } from './components/restaurant-tag/restaurant-tag.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     NavigationComponent,
     HomeComponent,
     RestaurantsComponent,
-    ProfileComponent
+    ProfileComponent,
+    RestaurantTagComponent
   ],
   imports: [
     BrowserModule,
