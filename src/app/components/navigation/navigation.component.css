@@ -63,9 +63,3 @@ a:visited {
   color: inherit; /* hereda el color del elemento padre */
   text-decoration: none; /* elimina el subrayado del enlace */
 }
-
-a:hover,
-a:focus {
-  color: inherit; /* hereda el color del elemento padre al pasar el mouse por encima */
-  text-decoration: underline; /* añade el subrayado al pasar el mouse por encima */
-}
