@@ -5,8 +5,8 @@
     margin: 0;
     padding: 0;
     --primary: #FFCD29;
-    --contrast: #FFFFFF;
+    --complementary: #295BFF;
     --fade: linear-gradient(90.18deg, #FFCD29 2.7%, #DA4414 97.88%);
-    --stroke: #23232e;
+    --text-light: #888888;
     --background: #D0D0D0;
 }

@@ -7,6 +7,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeComponent } from './pages/home/home.component';
 import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { CategoryFrameComponent } from './components/category-frame/category-frame.component';
+import { DishComponent } from './components/dish/dish.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     NavigationComponent,
     HomeComponent,
     RestaurantsComponent,
-    ProfileComponent
+    ProfileComponent,
+    CategoryFrameComponent,
+    DishComponent
   ],
   imports: [
     BrowserModule,

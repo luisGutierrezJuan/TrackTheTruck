@@ -1,0 +1,69 @@
+/*.dish{
+    background: white;
+    width: 100%;
+    height: 7rem;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.dishInfo{
+    width: 50%;
+    padding: 1rem;
+    
+}
+
+.dishInfo p{
+    
+    font-size: .8rem;
+    color: var(--text-light)
+}
+.dishInfo p:last-child{
+    
+    font-size: .6rem;
+    color: var(--text-light)
+}*/
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    cursor: pointer;
+  }
+  
+  .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-description {
+    font-size: .8rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .card-price {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .card-image {
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
