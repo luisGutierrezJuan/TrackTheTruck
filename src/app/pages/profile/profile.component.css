@@ -1,0 +1,77 @@
+.container{
+    min-height: 100vh;
+    width:100%;
+    background-color: var(--background);
+}
+
+.mainSection{
+    padding: 4rem 1rem 1rem 1rem;
+    min-height: 100vh;
+    width:100%;
+}
+
+.columna-izquierda {
+    width: 30%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+  }
+  
+  .columna-derecha {
+    width: 70%;
+    float: right;
+  }
+
+  #user-icon{
+    max-width: 50%;
+  }
+
+  #card-info{
+    background-color: #D7CDAD;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  #title-text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+
+  #input-text{
+    background: #FFFFFF;
+    border-radius: 38px;
+    border: 0px;
+    width: 90%;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  #expiration-date{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #input-text-2{
+    background: #FFFFFF;
+    border-radius: 38px;
+    border: 0px;
+    width: 30%;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
