@@ -1,0 +1,9 @@
+.container{
+    min-height: 100vh;
+    width:100%;
+    background-color: var(--background);
+}
+
+.mainSection{
+    padding: 4rem 1rem 1rem 1rem;
+}

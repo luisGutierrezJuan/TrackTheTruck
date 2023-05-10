@@ -56,3 +56,10 @@
     transition: 70ms ease;
     cursor: pointer;
 }
+
+a,
+a:link,
+a:visited {
+  color: inherit; /* hereda el color del elemento padre */
+  text-decoration: none; /* elimina el subrayado del enlace */
+}
