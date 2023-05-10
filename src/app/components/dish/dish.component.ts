@@ -6,8 +6,24 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./dish.component.css']
 })
 export class DishComponent {
-  @Input() dishName: string=""
-  @Input() dishPrice: string=""
-  @Input() dishDescription: string=""
-  @Input() dishPhoto: string=""
+  @Input() dish: any;
+  @Input() order: any;
+  @Input() addDish: Function;
+  @Input() removeDish: Function;
+  amount: number = 0;
+  
+
+  incrementAmount(): void{
+    if(this.amount <= 15){
+      this.amount++;
+      this.addDish(this.order, this.dish)
+    }
+  }
+
+  decrementAmount(): void{
+    if(this.amount > 0){
+      this.amount--;
+      this.removeDish(this.order, this.dish)
+    }
+  }
 }

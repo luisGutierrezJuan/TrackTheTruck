@@ -7,8 +7,9 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { HomeComponent } from './pages/home/home.component';
 import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { CategoryFrameComponent } from './components/category-frame/category-frame.component';
 import { DishComponent } from './components/dish/dish.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DishGroupComponent } from './components/dish-group/dish-group.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { DishComponent } from './components/dish/dish.component';
     HomeComponent,
     RestaurantsComponent,
     ProfileComponent,
-    CategoryFrameComponent,
-    DishComponent
+    DishComponent,
+    FooterComponent,
+    DishGroupComponent
   ],
   imports: [
     BrowserModule,

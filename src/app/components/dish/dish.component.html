@@ -7,11 +7,16 @@
 </div>-->
 <div class="card">
     <div class="card-content">
-      <h3 class="card-title">Nombre del plato</h3>
-      <p class="card-description">Pizza con piña que no le gusta ni a tu abuela shao abadsohao oabohasbds  hobha habah h a abhab  abhasdhba </p>
-      <p class="card-price">$10</p>
+      <h3 class="card-title">{{dish.name}}</h3>
+      <p class="card-description">{{dish.description}} </p>
+      <p class="card-price">{{dish.price}}€</p>
+      <div class="quantity-selector">
+        <button class="quantity-button decrement" (click)="decrementAmount()">-</button>
+        <span class="quantity-display">{{amount}}</span>
+        <button class="quantity-button increment" (click)="incrementAmount()">+</button>
+      </div>
     </div>
     <div class="card-image">
-      <img src="https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2022/10/20/pizza.jpeg" alt="Plato de comida">
+      <img src={{dish.photo}} alt="Plato de comida">
     </div>
   </div>
