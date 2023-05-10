@@ -11,67 +11,98 @@
 }
 
 .columna-izquierda {
-    width: 30%;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10vh;
-  }
-  
-  .columna-derecha {
-    width: 70%;
-    float: right;
-  }
+  width: 30%; /* Ajusta el ancho en rem según tus necesidades */
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem; /* Ajusta el espacio entre elementos en rem según tus necesidades */
+}
 
-  #user-icon{
-    max-width: 50%;
-  }
+.columna-derecha {
+  width: 65%; /* Ajusta el ancho en rem según tus necesidades */
+  float: right;
+}
 
-  #card-info{
-    background-color: #D7CDAD;
-    width: 80%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    
-  }
+#user-icon {
+  max-width: 10rem; /* Ajusta el tamaño máximo en rem según tus necesidades */
+}
 
-  #title-text{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    color: #000000;
-    margin-bottom: 5px;
-    padding-left: 10px;
-  }
+#card-info {
+  background-color: #D7CDAD;
+  width: 100%; /* Ajusta el ancho en rem según tus necesidades */
+  border-radius: 0.5rem; /* Ajusta el radio del borde en rem según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  gap:1rem
+}
 
-  #input-text{
-    background: #FFFFFF;
-    border-radius: 38px;
-    border: 0px;
-    width: 90%;
-    height: 30px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    padding-left: 10px;
-  }
+#title-text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem; /* Ajusta el tamaño de fuente en rem según tus necesidades */
+  line-height: 2.5rem; /* Ajusta el alto de línea en rem según tus necesidades */
+  color: #000000;
+  margin-bottom: 0.2rem;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+}
 
-  #expiration-date{
-    display: flex;
-    flex-direction: row;
-  }
+#input-text {
+  background: #FFFFFF;
+  border-radius: 0.95rem; /* Ajusta el radio del borde en rem según tus necesidades */
+  border: 0px;
+  width: 90%;
+  height: 2.5rem; /* Ajusta la altura en rem según tus necesidades */
+  margin-bottom: 1rem;
+  margin-left: 0.5rem; /* Ajusta el margen izquierdo en rem según tus necesidades */
+  font-size: 1.25rem; /* Ajusta el tamaño de fuente en rem según tus necesidades */
+  text-indent: 1rem;
+}
 
-  #input-text-2{
-    background: #FFFFFF;
-    border-radius: 38px;
-    border: 0px;
-    width: 30%;
-    height: 30px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    padding-left: 10px;
-  }
+#expiration-date {
+  display: flex;
+  flex-direction: row;
+}
+
+#input-text-2 {
+  background: #FFFFFF;
+  border-radius: 0.95rem; /* Ajusta el radio del borde en rem según tus necesidades */
+  border: 0px;
+  width: 25%; /* Ajusta el ancho en rem según tus necesidades */
+  height: 2.5rem; /* Ajusta la altura en rem según tus necesidades */
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem; /* Ajusta el margen izquierdo en rem según tus necesidades */
+  text-indent: 1rem;
+}
+
+.element {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 30%;
+  height: 30%;
+  margin-top: -3rem;
+}
+
+button:hover {
+  background-color: green;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Opcional, para darle una altura al contenedor */
+}
