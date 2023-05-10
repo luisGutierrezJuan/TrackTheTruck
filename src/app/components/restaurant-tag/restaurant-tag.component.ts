@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Hora } from 'src/app/models/hora';
 
 @Component({
   selector: 'app-restaurant-tag',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class RestaurantTagComponent {
 
+  @Input() name: string = "";
+  @Input() puntuation: number = 0;
+  @Input() image: string = "";
+  @Input() hora: Hora = new Hora(0, 0);
+
+
+  constructor() { }
+  
 }
