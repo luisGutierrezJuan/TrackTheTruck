@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hora } from 'src/app/models/hora';
-import { tagPosition } from 'src/app/models/tagPosition';
+import { HourRange } from 'src/app/models/hourRange';
 
 @Component({
   selector: 'app-restaurant-tag',
@@ -11,9 +10,8 @@ export class RestaurantTagComponent {
 
   @Input() name: string = "Restaurante";
   @Input() puntuation: number = 0;
-  @Input() image: string = "";
-  @Input() hora: Hora = new Hora(0, 0);
-  @Input() position: tagPosition = {width: 0, height: 0, top: 0, left: 0};
+  @Input() image: string = "https://restauracionnews.com/wp-content/uploads/2020/09/Food-Truck-IceCoBar-en-Jerez-de-la-Frontera.jpg";
+  @Input() schedule: HourRange = new HourRange(0, 0, 0, 0);
 
   constructor() { }
   
