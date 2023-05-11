@@ -1,5 +1,4 @@
 import { HourRange } from "./hourRange";
-import { tagPosition } from "./tagPosition";
 
 export interface restaurant {
     name: string;

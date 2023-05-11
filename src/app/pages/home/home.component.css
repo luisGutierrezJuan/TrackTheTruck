@@ -5,5 +5,8 @@
 }
 
 .mainSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    gap: 2.3rem;
     padding: 4rem 1rem 1rem 1rem;
 }
