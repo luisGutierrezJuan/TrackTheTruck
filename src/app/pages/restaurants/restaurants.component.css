@@ -2,11 +2,12 @@
     min-height: 100vh;
     width:100%;
     background-color: var(--background);
-    
+    position:relative;
 }
 
 .mainSection{
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 4rem 1rem 3rem 1rem;
+    
 }
 
 .banner {
@@ -35,8 +36,21 @@
 
 .labelContent{
     padding: 1rem;
+    position:relative;
 }
 
+.label button{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    margin: 1.25rem;
+    padding: .5rem;
+    background-color: var(--complementary);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: .75rem;
+}
 .labelContent p{
     font-size: .9rem;
     color: var(--text-light);
@@ -55,6 +69,20 @@
 .labelRating svg {
     height: .9rem;
     color: var(--primary);
+}
+
+
+.orderButton{
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5rem;
+    background-color: var(--complementary);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: .75rem;
 }
 
 @media screen and (min-width: 400px) {

@@ -1,6 +1,9 @@
 
 <div class="container">
+    <!--Navigation Bar-->
     <app-navigation></app-navigation>
+
+    <!--Banner containing restaurant photo and information-->
     <div class="banner">
         <img src="https://i.blogs.es/fff4ca/pizzas/1366_2000.jpg"/>
         <div class="label">
@@ -15,20 +18,21 @@
                     </svg>
                 </div>
             </div>
+            
         </div>
     </div>
     
+    <!--Main section containing the restaurant menu-->
     <div class="mainSection">
-        <app-category-frame [category]="'Entrantes'">
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-            <app-dish [dishName]="'Pizza'" [dishPrice]="'23.45$'" [dishDescription]="'pizza blanca con mozzarella, mortadela, crema de pistachos, burrata y aceite de oliva'"></app-dish>
-        </app-category-frame>
-        
-        
-        <div class="menu"></div>
+        <div *ngFor="let category of menu | keyvalue">
+            <app-dish-group [groupName]=category.key>
+                <div *ngFor="let dish of category.value">
+                    <app-dish [dish]=dish [addDish]="addDish" [removeDish]="removeDish" [order]="order"></app-dish>
+                </div>
+            </app-dish-group>
+        </div>
     </div>
+    <button class="orderButton" (click)="pushOrder()">Make an order</button>
+    <!--Footer-->
+    <app-footer></app-footer>
 </div>
