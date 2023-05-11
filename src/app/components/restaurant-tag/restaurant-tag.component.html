@@ -1,12 +1,12 @@
-<div class="rectangulo">
-    <img src="https://restauracionnews.com/wp-content/uploads/2020/09/Food-Truck-IceCoBar-en-Jerez-de-la-Frontera.jpg" alt="Imagen de restaurante">
+<div class="rectangulo" [style.top.rem]="position.top" [style.left.rem]="position.left">
+    <img [src]="image" alt="Imagen de restaurante">
     <div class="restaurante-info">
         <div>
             <p class="restaurante-nombre">{{ name }}</p>
-            <p class="restaurante-horario">0:00-0:00</p>
+            <p class="restaurante-horario">{{ schedule.toString() }}</p>
         </div>
         <div class="restaurante-valoracion">
-            <span>4.2</span>
+            <span>{{ puntuation }}</span>
             <img class="estrella" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/icons/star-fill.svg" alt="Estrella">
         </div>
     </div>
