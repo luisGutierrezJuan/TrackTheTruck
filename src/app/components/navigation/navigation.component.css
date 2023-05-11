@@ -63,3 +63,17 @@ a:visited {
   color: inherit; /* hereda el color del elemento padre */
   text-decoration: none; /* elimina el subrayado del enlace */
 }
+
+.ventana-emergente {
+    position: fixed;
+    top: 50%;
+    left: 50%; /* se ha cambiado de 50% a 60% */
+    transform: translate(-50%, -50%);
+    width: 600px; /* se ha cambiado de 400px a 500px */
+    height: 500px; /* se ha cambiado de 300px a 400px */
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 9999;
+  }
+  

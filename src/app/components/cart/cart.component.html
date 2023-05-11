@@ -1,0 +1,43 @@
+<!--<div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Mensaje</h4>
+          <button type="button" class="close" (click)="close()">&times;</button>
+        </div>
+        <div class="modal-body">
+          {{ message }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="close()">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<h2 mat-dialog-title>¡Hola!</h2>
+    <mat-dialog-content>
+      <p>Esta es una ventana emergente.</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="true">Aceptar</button>
+      <button mat-button [mat-dialog-close]="false">Cancelar</button>
+    </mat-dialog-actions>-->
+    <div class="carrito">
+        <h2>Cart</h2>
+        <ul>
+          <li *ngFor="let item of items">
+            <span>{{ item.name }}</span>
+            <span>{{ item.stock }}</span>
+            <span>{{ item.price | currency:'USD':'symbol-narrow' }}</span>
+            <button (click)="removeItem(item)">Eliminar</button>
+          </li>
+        </ul>
+        <div class="total">
+          <span>Total:</span>
+          <span>{{ total | currency:'USD':'symbol-narrow' }}</span>
+        </div>
+        <button (click)="purchase()">Comprar</button>
+      </div>
+
+      
