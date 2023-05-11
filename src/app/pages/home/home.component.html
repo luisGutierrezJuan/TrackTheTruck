@@ -1,6 +1,11 @@
 <div class="container">
     <app-navigation></app-navigation>
     <div class="mainSection">
-        <p>Hey funciona</p>
+        <app-restaurant-tag *ngFor="let restaurant of allRestaurants"
+            [name]="restaurant.name"
+            [puntuation]="restaurant.puntuation"
+            [image]="restaurant.image"
+            [schedule]="restaurant.schedule">
+        </app-restaurant-tag>
     </div>
 </div>

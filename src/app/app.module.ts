@@ -9,6 +9,8 @@ import { RestaurantsComponent } from './pages/restaurants/restaurants.component'
 import { ProfileComponent } from './pages/profile/profile.component';
 import { CategoryFrameComponent } from './components/category-frame/category-frame.component';
 import { DishComponent } from './components/dish/dish.component';
+import { RestaurantTagComponent } from './components/restaurant-tag/restaurant-tag.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { DishComponent } from './components/dish/dish.component';
     RestaurantsComponent,
     ProfileComponent,
     CategoryFrameComponent,
-    DishComponent
+    DishComponent,
+    RestaurantTagComponent
   ],
   imports: [
     BrowserModule,

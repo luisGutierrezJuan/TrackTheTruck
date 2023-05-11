@@ -5,7 +5,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { RestaurantsComponent } from './pages/restaurants/restaurants.component';
 
 const routes: Routes = [
-  { path: '', component: RestaurantsComponent },
+  { path: '', component: HomeComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'restaurants', component: RestaurantsComponent },
   { path: 'restaurants:restaurantId', component: RestaurantsComponent },

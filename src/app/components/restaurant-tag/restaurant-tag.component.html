@@ -1,0 +1,13 @@
+<div class="rectangulo">
+    <img [src]="image" alt="Imagen de restaurante">
+    <div class="restaurante-info">
+        <div>
+            <p class="restaurante-nombre">{{ name }}</p>
+            <p class="restaurante-horario">{{ schedule.toString() }}</p>
+        </div>
+        <div class="restaurante-valoracion">
+            <span>{{ puntuation }}</span>
+            <img class="estrella" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/icons/star-fill.svg" alt="Estrella">
+        </div>
+    </div>
+</div>
