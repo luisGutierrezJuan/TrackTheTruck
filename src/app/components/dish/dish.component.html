@@ -1,0 +1,22 @@
+<!--<div class="dish">
+    <div class="dishInfo">
+        <h1>{{dishName}}</h1>
+        <p>{{dishPrice}}</p>
+        <p>{{dishDescription}}</p>
+    </div>
+</div>-->
+<div class="card">
+    <div class="card-content">
+      <h3 class="card-title">{{dish.name}}</h3>
+      <p class="card-description">{{dish.description}} </p>
+      <p class="card-price">{{dish.price}}€</p>
+      <div class="quantity-selector">
+        <button class="quantity-button decrement" (click)="decrementAmount()">-</button>
+        <span class="quantity-display">{{amount}}</span>
+        <button class="quantity-button increment" (click)="incrementAmount()">+</button>
+      </div>
+    </div>
+    <div class="card-image">
+      <img src={{dish.photo}} alt="Plato de comida">
+    </div>
+  </div>
