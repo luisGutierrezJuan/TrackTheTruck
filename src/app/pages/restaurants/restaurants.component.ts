@@ -18,9 +18,6 @@ export class RestaurantsComponent {
 
   constructor(private orderService: OrderService, private changeDetectorRef: ChangeDetectorRef) {}
 
-  ngOnInit(){
-    console.log("reload");
-  }
 
   addDish(order: any, dish: any): void{
     if (dish.id in order){
@@ -43,7 +40,6 @@ export class RestaurantsComponent {
   pushOrder(){
     this.orderService.setOrder(this.order);
     this.order = {};
-
   }
   
 }
