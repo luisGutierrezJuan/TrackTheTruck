@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { Dish } from 'src/app/interfaces/dish';
 import { OrderService } from 'src/app/services/order.service';
 
@@ -16,7 +16,11 @@ export class RestaurantsComponent {
   order: { [id: string]: {name: string, amount: number} } = {};
 
 
-  constructor(private orderService: OrderService) {}
+  constructor(private orderService: OrderService, private changeDetectorRef: ChangeDetectorRef) {}
+
+  ngOnInit(){
+    console.log("reload");
+  }
 
   addDish(order: any, dish: any): void{
     if (dish.id in order){
@@ -38,6 +42,8 @@ export class RestaurantsComponent {
 
   pushOrder(){
     this.orderService.setOrder(this.order);
+    this.order = {};
+
   }
   
 }
