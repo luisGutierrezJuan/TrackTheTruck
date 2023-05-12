@@ -1,11 +1,12 @@
 <div class="container">
     <app-navigation></app-navigation>
     <div class="mainSection">
-        <app-restaurant-tag *ngFor="let restaurant of allRestaurants"
-            [name]="restaurant.name"
-            [puntuation]="restaurant.puntuation"
-            [image]="restaurant.image"
-            [schedule]="restaurant.schedule">
+        <app-restaurant-tag *ngFor="let restaurant of allRestaurants | async"
+            [Name]="restaurant.name"
+            [Assesment]="restaurant.assesments"
+            [Photo]="restaurant.photo"
+            [Schedule]="restaurant.schedule"
+            (click)="onRestaurantClick(restaurant)">
         </app-restaurant-tag>
     </div>
 </div>

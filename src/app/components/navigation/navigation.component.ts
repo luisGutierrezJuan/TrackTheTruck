@@ -14,7 +14,7 @@ export class NavigationComponent {
   constructor(
     private readonly authService: AuthService, 
     private readonly router: Router
-  ){} 
+  ) {} 
 
   viewCart() {
     if (this.cartVisibility) this.cartVisibility = false;

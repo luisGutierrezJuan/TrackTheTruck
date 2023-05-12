@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { HourRange } from 'src/app/models/hourRange';
+import { Restaurant } from 'src/app/interfaces/restaurant.interface';
 
 @Component({
   selector: 'app-restaurant-tag',
@@ -8,11 +8,11 @@ import { HourRange } from 'src/app/models/hourRange';
 })
 export class RestaurantTagComponent {
 
-  @Input() name: string = "Restaurante";
-  @Input() puntuation: number = 0;
-  @Input() image: string = "https://restauracionnews.com/wp-content/uploads/2020/09/Food-Truck-IceCoBar-en-Jerez-de-la-Frontera.jpg";
-  @Input() schedule: HourRange = new HourRange(0, 0, 0, 0);
+  @Input() Name: string = "Restaurante";
+  @Input() Assesment: number = 0;
+  @Input() Photo: string = "https://restauracionnews.com/wp-content/uploads/2020/09/Food-Truck-IceCoBar-en-Jerez-de-la-Frontera.jpg";
+  @Input() Schedule: string;
 
   constructor() { }
-  
+
 }

@@ -14,11 +14,13 @@ import { CartComponent } from './components/cart/cart.component';
 import { AuthService } from './services/auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule} from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FirestoreService } from './services/firestore.service';
 
 @NgModule({
   declarations: [
@@ -41,10 +43,14 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     FormsModule,
     MatDialogModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    FirestoreService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

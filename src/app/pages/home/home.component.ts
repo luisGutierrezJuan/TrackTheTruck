@@ -1,7 +1,8 @@
-import { CartComponent } from 'src/app/components/cart/cart.component';
-import { Component, OnInit } from '@angular/core';
-import { restaurant } from 'src/app/models/restaurant';
-import { HourRange } from 'src/app/models/hourRange';
+import { Component } from '@angular/core';
+import { FirestoreService } from 'src/app/services/firestore.service';
+import { Restaurant } from 'src/app/interfaces/restaurant.interface';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,18 +11,27 @@ import { HourRange } from 'src/app/models/hourRange';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  allRestaurants: restaurant[] = [];
+  allRestaurants: Observable<Restaurant[]>;
 
-  constructor() {}
+  constructor(
+    private readonly firestore: FirestoreService,
+    private readonly router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.allRestaurants = this.firestore.getRestaurants();
+    /*console.log(this.allRestaurants);
+    for (let restaurant in this.allRestaurants){
+      console.log(restaurant);
+    }*/
+  }
 
-    this.simulateDBImport();
-
+  onRestaurantClick(restaurant: Restaurant){
+    this.router.navigate(['/restaurants' , restaurant.name]);
   }
 
   simulateDBImport(): void {
-    const foodTrucks = [
+    /*const foodTrucks = [
       {
         name: 'Food Truck 1',
         puntuation: 4.5,
@@ -97,9 +107,6 @@ export class HomeComponent {
       },
       // Añade los demás food trucks aquí
     ];
-
-    this.allRestaurants = foodTrucks;
+    */
   }
-
-
 }

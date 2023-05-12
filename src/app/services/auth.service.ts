@@ -1,7 +1,6 @@
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { LoginData } from '../interfaces/login-data.interface';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
