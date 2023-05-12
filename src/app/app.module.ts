@@ -19,6 +19,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { OrderService } from './services/order.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     MatDialogModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

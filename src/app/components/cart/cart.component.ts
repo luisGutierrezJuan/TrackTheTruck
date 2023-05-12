@@ -9,16 +9,23 @@ import { DishData } from 'src/app/interfaces/dish.interface'
 export class CartComponent {
   items: DishData[] | undefined;
   total: number | undefined;
+  @Input() order: any;
 
   constructor() {
 
   }
   
-  removeItem(item: DishData){
+  removeItem(id: string): void{
 
   }
 
   purchase(){
 
+  }
+
+  orderKeys(): any {
+    if(this.order){
+      return Object.keys(this.order);
+    }
   }
 }

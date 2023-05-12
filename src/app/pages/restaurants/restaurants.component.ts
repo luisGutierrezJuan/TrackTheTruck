@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Dish } from 'src/app/interfaces/dish';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-restaurants',
@@ -13,6 +14,9 @@ export class RestaurantsComponent {
                                         {id: "04", name:"Pizza Pepperoni", description:"en realidad se dice salami picante", price: 25, photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiFv62CPGwHXc-wbAlODNz_CjBoMr7fdKK0A&usqp=CAU"},
                                         {id: "05", name:"Pizza 4 quesos", description:"La pizza mas aburrida, parece que masticas cemento", price: 25, photo: "https://www.recetin.com/wp-content/uploads/2012/01/pizza_cuatro_quesos.jpg"}]};
   order: { [id: string]: {name: string, amount: number} } = {};
+
+
+  constructor(private orderService: OrderService) {}
 
   addDish(order: any, dish: any): void{
     if (dish.id in order){
@@ -33,7 +37,7 @@ export class RestaurantsComponent {
   }
 
   pushOrder(){
-    console.log(this.order);
+    this.orderService.setOrder(this.order);
   }
   
 }
