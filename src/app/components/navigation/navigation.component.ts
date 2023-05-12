@@ -11,7 +11,7 @@ import { OrderService } from 'src/app/services/order.service';
 export class NavigationComponent {
 
   public cartVisibility: boolean = false;
-  public order: any;
+  
 
   constructor(
     private readonly authService: AuthService, 
@@ -20,10 +20,10 @@ export class NavigationComponent {
   ){} 
 
   viewCart() {
+    
     if (this.cartVisibility) this.cartVisibility = false;
     else this.cartVisibility = true;
-    this.order = this.orderService.getOrder();
-    console.log(this.order);
+    
   }
 
   profile(){
@@ -33,5 +33,9 @@ export class NavigationComponent {
       console.log("pepe");
       this.router.navigate(['/login']);
     }
+  }
+
+  getOrder(){
+    return this.orderService.getOrder();
   }
 }

@@ -30,7 +30,7 @@
             <span>{{ order[key].name }}</span>
             <span>{{ order[key].amount }}</span>
             <span>{{ order[key].price }}</span>
-            <button >Eliminar</button>
+            <button (click)="removeItem(key)">Eliminar</button>
           </li>
         </ul>
         <div class="total">
