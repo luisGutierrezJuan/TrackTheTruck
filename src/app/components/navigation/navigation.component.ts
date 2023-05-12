@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-navigation',
@@ -11,14 +12,18 @@ export class NavigationComponent {
 
   public cartVisibility: boolean = false;
   
+
   constructor(
     private readonly authService: AuthService, 
+    private readonly orderService: OrderService,
     private readonly router: Router
   ) {} 
 
   viewCart() {
+    
     if (this.cartVisibility) this.cartVisibility = false;
     else this.cartVisibility = true;
+    
   }
 
   profile(){
@@ -28,5 +33,9 @@ export class NavigationComponent {
       console.log("pepe");
       this.router.navigate(['/login']);
     }
+  }
+
+  getOrder(){
+    return this.orderService.getOrder();
   }
 }

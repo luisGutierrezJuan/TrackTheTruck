@@ -85,6 +85,9 @@
     border-radius: .75rem;
 }
 
+.orderButton:hover {
+    background-color: var(--complementary-dark)
+}
 @media screen and (min-width: 400px) {
     .label {
         max-width: 20rem;

@@ -1,8 +1,10 @@
-import { Component, Inject, Input } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Dish } from 'src/app/interfaces/dish';
 import { Restaurant } from 'src/app/interfaces/restaurant.interface';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { OrderService } from 'src/app/services/order.service';
+
 
 @Component({
   selector: 'app-restaurants',
@@ -16,7 +18,9 @@ export class RestaurantsComponent {
 
  constructor(
   private route: ActivatedRoute,
-  private readonly firestore: FirestoreService
+  private readonly firestore: FirestoreService,
+  private orderService: OrderService, 
+  private changeDetectorRef: ChangeDetectorRef
   ) {}
 
  ngOnInit() {
@@ -52,7 +56,8 @@ export class RestaurantsComponent {
   }
 
   pushOrder(){
-    console.log(this.order);
+    this.orderService.setOrder(this.order);
+    this.order = {};
   }
 
   /*ngOnInit(){

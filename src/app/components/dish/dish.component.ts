@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-dish',
@@ -12,6 +13,12 @@ export class DishComponent {
   @Input() removeDish: Function;
   amount: number = 0;
   
+  constructor(private readonly orderService: OrderService){}
+  ngOnInit() {
+    this.orderService.getOrder().subscribe(
+      () =>{this.amount = 0}
+    );
+  }
 
   incrementAmount(): void{
     if(this.amount <= 15){
@@ -26,4 +33,5 @@ export class DishComponent {
       this.removeDish(this.order, this.dish)
     }
   }
+
 }

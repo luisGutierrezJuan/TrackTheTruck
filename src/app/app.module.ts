@@ -21,6 +21,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FirestoreService } from './services/firestore.service';
+import { OrderService } from './services/order.service';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { FirestoreService } from './services/firestore.service';
   ],
   providers: [
     AuthService,
-    FirestoreService
+    FirestoreService,
+    OrderService
   ],
   bootstrap: [AppComponent]
 })

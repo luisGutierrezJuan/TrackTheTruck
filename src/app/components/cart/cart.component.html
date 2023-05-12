@@ -26,18 +26,18 @@
     <div class="carrito">
         <h2>Cart</h2>
         <ul>
-          <li *ngFor="let item of items">
-            <span>{{ item.name }}</span>
-            <span>{{ item.stock }}</span>
-            <span>{{ item.price | currency:'USD':'symbol-narrow' }}</span>
-            <button (click)="removeItem(item)">Eliminar</button>
+          <li *ngFor="let key of orderKeys()">
+            <span>{{ order[key].name }}</span>
+            <span>{{ order[key].amount }}</span>
+            <span>{{ order[key].price }}</span>
+            <button (click)="removeItem(key)">Eliminar</button>
           </li>
         </ul>
         <div class="total">
           <span>Total:</span>
           <span>{{ total | currency:'USD':'symbol-narrow' }}</span>
         </div>
-        <button (click)="purchase()">Comprar</button>
+        <button >Comprar</button>
       </div>
 
       
