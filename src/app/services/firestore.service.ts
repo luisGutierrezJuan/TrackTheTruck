@@ -21,10 +21,9 @@ export class FirestoreService {
   }
 
   getRestaurantByName(name: string): Restaurant{
-    //list= this.firestore.collection('Restaurants').doc
+    
     this.restaurant = this.firestore.collection<Restaurant>('Restaurants').valueChanges();
     this.restaurant.subscribe((list: Restaurant[]) => {this.restaurants = list;});
-    //this.getRestaurants();
     console.log()
     for (let i=0; i < this.restaurants.length; i++){
       if (this.restaurants[i].name == name){
