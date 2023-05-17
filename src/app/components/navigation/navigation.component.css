@@ -17,9 +17,10 @@
     
 }
 
-.navTitle h1{
+.navTitle svg{
+    width: 2.5rem;
     margin: 0;
-    font-size: .8rem;
+    
 }
 
 #titleContrast {
@@ -37,7 +38,7 @@
     list-style: none;
 }
 
-.navItem{
+.navItem {
     width: 3rem;
     height: 3rem;
     position: relative;

@@ -37,4 +37,14 @@ export class CartComponent {
       return Object.keys(this.order);
     }
   }
+
+  getTotal(): number {
+    let total = 0;
+    if(this.order){
+      for (let key of this.orderKeys()){
+        total += this.order[key].amount * this.order[key].price;
+      }
+    }
+    return total;
+  }
 }
