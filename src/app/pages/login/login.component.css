@@ -40,28 +40,23 @@
   }
   
   button[type="submit"] {
+    display: block;
     width: 65%;
     padding: 10px;
     background-color: #FFCD29;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 6px;
     cursor: pointer;
     margin-top: 1rem;
+    margin-left: 8rem;
   }
   
   button[type="submit"]:hover {
-    background-color: #d3a409;
+    background-color: #FFCD29;
   }
 .goRegister{
-    display: flex;
     margin-top: 1rem;
+    margin-left: 10em;
     text-align: center;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;
 } 
-.botones-container {
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center;
-}
