@@ -94,6 +94,7 @@ button {
   width: 30%;
   height: 30%;
   margin-top: -3rem;
+  margin-right: 20px;
 }
 
 button:hover {
@@ -112,10 +113,12 @@ button:hover {
   color: #ffffff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .logout-button:hover {
-  background-color: #FFCD29;
+  background-color: #d3a409;
 }
