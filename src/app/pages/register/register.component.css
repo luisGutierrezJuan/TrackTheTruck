@@ -47,11 +47,17 @@ button[type="submit"] {
     color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
     margin-top: 1rem;
-    margin-left: 8rem;
+    cursor: pointer;
 }
 
 button[type="submit"]:hover {
-    background-color: #FFCD29;
+    background-color: #d3a409;
 }
+
+.botones-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+    background-color: red;
+  }
