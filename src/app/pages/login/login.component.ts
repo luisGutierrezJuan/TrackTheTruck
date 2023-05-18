@@ -18,6 +18,11 @@ export class LoginComponent {
 
   onSubmit() {
     this.authService.login({email: this.email, password: this.password})
-      .then(() => this.router.navigate(['/']));
+      .then(() => this.continue());
+  }
+
+  continue(){
+    this.router.navigate(['/']);
+    this.authService.setIsAuthenticatedTrue();
   }
 }

@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
+  private isAuthenticated: boolean = false;
 
   constructor(
     private auth: AngularFireAuth,
@@ -19,17 +20,16 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
-  isAuthenticated(): boolean{
-    if (this.auth.currentUser === null || this.auth.currentUser === undefined) {
-      console.log("No está autenticado");
-      return false;
-    } else {
-      console.log("Está autenticado");
-      return true;
-    }
+  getIsAuthenticated(): boolean {
+    return this.isAuthenticated;
+  }
+
+  setIsAuthenticatedTrue() { 
+    this.isAuthenticated = true;
   }
 
   logout() {
+    this.isAuthenticated = false;
     return this.auth.signOut();
   }
 }

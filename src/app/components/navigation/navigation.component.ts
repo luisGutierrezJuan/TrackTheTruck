@@ -27,10 +27,9 @@ export class NavigationComponent {
   }
 
   profile(){
-    if (this.authService.isAuthenticated()){
+    if (this.authService.getIsAuthenticated()){
       this.router.navigate(['/profile']);
     } else {
-      console.log("pepe");
       this.router.navigate(['/login']);
     }
   }

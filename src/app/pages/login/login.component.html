@@ -1,20 +1,29 @@
-<div class="login">
-    <form class="custom-form" method="post">
-      <h1>Login</h1>
-      <input
-        type="email"
-        [(ngModel)]="email"
-        name="email"
-        placeholder="Email"
-        required="required"
-      />
-      <input
-        type="password"
-        [(ngModel)]="password"
-        name="password"
-        placeholder="Password"
-        required="required"
-      />
-      <button type="submit" (click)="onSubmit()">Log in</button>
-    </form>
+<div class="container">
+  <!--Navigation Bar-->
+  <app-navigation></app-navigation>
+  <div class="form">
+    <div class="login">
+      <form class="custom-form" method="post">
+        <h1>Login</h1>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="Email"
+          required="required"
+        />
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Password"
+          required="required"
+        />
+        <button type="submit" (click)="onSubmit()">Sign in</button>
+        <div class="goRegister">
+          <a href="/register">Create an account</a>
+        </div>
+      </form>
+    </div>
   </div>
+</div>

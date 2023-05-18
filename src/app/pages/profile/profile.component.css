@@ -104,5 +104,18 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Opcional, para darle una altura al contenedor */
+  height: 200px; 
+}
+
+.logout-button {
+  background-color: #FFCD29;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #FFCD29;
 }
