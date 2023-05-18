@@ -49,14 +49,21 @@
     border-radius: 6px;
     cursor: pointer;
     margin-top: 1rem;
-    margin-left: 8rem;
   }
   
   button[type="submit"]:hover {
     background-color: #FFCD29;
   }
 .goRegister{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
-    margin-left: 10em;
     text-align: center;
 } 
+
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
