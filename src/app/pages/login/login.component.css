@@ -52,7 +52,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #FFCD29;
+    background-color: #d3a409;
   }
 .goRegister{
     display: flex;

@@ -49,9 +49,14 @@ button[type="submit"] {
     border-radius: 6px;
     cursor: pointer;
     margin-top: 1rem;
-    margin-left: 8rem;
 }
 
 button[type="submit"]:hover {
-    background-color: #FFCD29;
+    background-color: #d3a409;
 }
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
