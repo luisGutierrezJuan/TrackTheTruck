@@ -83,7 +83,7 @@
 }
 
 button {
-  background-color: #007bff;
+  background-color: #FFCD29;
   border: none;
   color: white;
   text-align: center;
@@ -98,7 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: green;
+  background-color: #d3a409;
 }
 
 .button-container{
