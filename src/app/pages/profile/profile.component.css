@@ -83,7 +83,7 @@
 }
 
 button {
-  background-color: #FFCD29;
+  background-color: #007bff;
   border: none;
   color: white;
   text-align: center;
@@ -94,11 +94,11 @@ button {
   width: 30%;
   height: 30%;
   margin-top: -3rem;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 button:hover {
-  background-color: #d3a409;
+  background-color: green;
 }
 
 .button-container{
